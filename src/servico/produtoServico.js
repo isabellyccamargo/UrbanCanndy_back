@@ -3,39 +3,31 @@ import produtoRepositorio from "../repositorio/produtoRepositorio.js";
 async function buscaTodosProdutos() {
    const produtos = await produtoRepositorio.buscaTodosProdutos();
 
-   if (!produtos) {
-        throw new Error("Não encontramos nenhum produto no estoque.");
-    }
-
     return produtos;
 }
 
 async function buscaProdutoPorId() {
-   const produtos = await produtoRepositorio.buscaProdutoPorId();
+   const produto = await produtoRepositorio.buscaProdutoPorId();
 
-   if (!produtos) {
-        throw new Error("Não encontramos o produto em estoque.");
-    }
-
-    return produtos;
+    return produto;
 }
 
 async function salvaProduto() {
-   const produtos = await produtoRepositorio.salvaProduto();
+   const salvarProduto = await produtoRepositorio.salvaProduto();
 
-    return produtos;
+    return salvarProduto;
 }
 
 async function editaProduto() {
-   const produtos = await produtoRepositorio.editaProduto();
+   const editarProduto = await produtoRepositorio.editaProduto();
 
-    return produtos;
+    return editarProduto;
 }
 
 async function excluiProduto() {
-   const produtos = await produtoRepositorio.excluiProduto();
+   const excluirProduto = await produtoRepositorio.excluiProduto();
 
-    return produtos;
+    return excluirProduto;
 }
 
 export default {

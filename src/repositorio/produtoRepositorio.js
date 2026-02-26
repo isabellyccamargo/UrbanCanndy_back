@@ -1,13 +1,42 @@
 async function buscaTodosProdutos() {
-    // Note que não tem req, nem res, nem try/catch
+
     const listaFake = [{ id: 1, nome: "Doce de Leite" }];
     
-    // Se você quisesse forçar um erro de teste, faria:
-    // throw new Error("Banco de dados fora do ar");
+    return listaFake; 
+}
 
+async function buscaProdutoPorId() {
+
+    const listaFake = [{ id: 1, nome: "Doce de Leite" }];
+    
+    return listaFake; 
+}
+
+async function salvaProduto() {
+
+    const listaFake = [{ id: 1, nome: "Doce de Leite" }];
+    
+    return listaFake; 
+}
+
+async function editaProduto() {
+
+    const listaFake = [{ id: 1, nome: "Doce de Leite" }];
+    
+    return listaFake; 
+}
+
+async function excluiProduto() {
+
+    const listaFake = [{ id: 1, nome: "Doce de Leite" }];
+    
     return listaFake; 
 }
 
 export default {
-    buscaTodosProdutos
+    buscaTodosProdutos,
+    buscaProdutoPorId,
+    salvaProduto,
+    editaProduto,
+    excluiProduto
 }
