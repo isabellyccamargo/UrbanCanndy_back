@@ -1,12 +1,17 @@
 import { Router } from "express";
-import ProdutoControlador from "../controlador/ProdutoControlador.js";
+import produtoControlador from "../controlador/produtoControlador.js";
 
 const rotas = Router();
 
-rotas.get("/listar", ProdutoControlador.buscaTodosProdutos);
+// PRODUTO
+rotas.get("/listar", produtoControlador.buscaTodosProdutos);
 
-rotas.get("/listarPorId", ProdutoControlador.buscaProdutoPorId);
+rotas.get("/listarPorId", produtoControlador.buscaProdutoPorId);
 
-rotas.post("/salvar", ProdutoControlador.salvaProduto);
+rotas.post("/salvar", produtoControlador.salvaProduto);
+
+rotas.put("/editar", produtoControlador.editaProduto);
+
+rotas.delete("/excluir", produtoControlador.excluiProduto);
 
 export default rotas;
